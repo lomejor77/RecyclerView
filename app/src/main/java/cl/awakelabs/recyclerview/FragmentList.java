@@ -1,12 +1,19 @@
 package cl.awakelabs.recyclerview;
 
+import android.app.ListFragment;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cl.awakelabs.recyclerview.databinding.FragmentListBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,10 +65,20 @@ public class FragmentList extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        FragmentListBinding binding = FragmentListBinding.inflate(getActivity().getLayoutInflater());
+        AdapterWords adapter = new AdapterWords();
+        adapter.setData(getData());
+        return binding.getRoot();
+    }
+    public List<String> getData() {
+        List<String> data = new ArrayList<>();
+
+        for(int i=0;  i<20; i++) {
+
+            data.add("word "+ i);
+
+        }
+        return data;
     }
 
-    public static class AdapterWords {
-    }
 }
