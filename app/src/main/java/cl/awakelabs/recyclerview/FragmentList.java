@@ -61,4 +61,7 @@ public class FragmentList extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list, container, false);
     }
+
+    public static class AdapterWords {
+    }
 }
