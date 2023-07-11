@@ -7,9 +7,9 @@
 
     <TextView
         android:id="@+id/txView"
-        android:layout_width="405dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="413dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
         android:text="@string/muestra_el_item"
         android:textAlignment="center"
         android:textColor="#B71C1C"

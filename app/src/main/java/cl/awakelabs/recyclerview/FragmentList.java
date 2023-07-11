@@ -68,6 +68,7 @@ public class FragmentList extends Fragment {
         FragmentListBinding binding = FragmentListBinding.inflate(getActivity().getLayoutInflater());
         AdapterWords adapter = new AdapterWords();
         adapter.setData(getData());
+        binding.listView.setAdapter(adapter);
         return binding.getRoot();
     }
     public List<String> getData() {
